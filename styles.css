@@ -1,8 +1,10 @@
+/**************** FONTS ****************/
 @font-face {
     font-family: WorkSans;
     src: url("/fonts/WorkSans-VariableFont_wght.ttf");
 }
 
+/**************** GENERIC RULES ****************/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,9 +14,128 @@ body {
     background-color: #111;
     color: #eee;
     font-family: WorkSans;
+    font-size: 10px;
 }
 
+/**************** HEADER RULES ****************/
 .header {
-    background-color: #222;
+    position: absolute;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    background-color: transparent;
+}
+
+.header__logo-container {
+    display: flex;
+}
+
+.header__logo {
+    margin: 0 1rem;
+    width: 1.5rem;
+}
+
+.header__logo-container h1 {
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.header__nav{
+    min-width: 20rem;
+    flex-shrink: 1;
+}
+
+.header__nav-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__nav-item {
+    list-style: none;
+}
+
+.header__nav-item a {
+    color: #eee;
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.5rem #48e;
+    letter-spacing: 0.2rem;
+}
+
+.link-selected a {
+    color: #48e;
+}
+
+/**************** WELCOME RULES ****************/
+.welcome {
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    height: 60vh;
+    background-image: linear-gradient(#111 10%, transparent, #111 80%), url("/imgs/welcome-background.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.welcome__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome__text-container h2 {
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+}
+
+.welcome__text-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 80%;
+    list-style: none;
+}
+
+.welcome__text-container li {
+    padding: 0.5rem 0;
+    color: #48e;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.welcome__text-container h4 {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+.welcome__text {
+    width: 60%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.welcome__nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.welcome__nav-list svg {
+    width: 1.3rem;
+}
+
+.welcome__nav-list svg .links {
+    fill: #eee;
 }
