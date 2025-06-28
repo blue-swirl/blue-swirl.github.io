@@ -4,7 +4,7 @@
     src: url("/fonts/WorkSans-VariableFont_wght.ttf");
 }
 
-/**************** GENERIC RULES ****************/
+/**************** GLOBAL RULES ****************/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,6 +15,13 @@ body {
     color: #eee;
     font-family: WorkSans;
     font-size: 10px;
+}
+
+.main__title {
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
 }
 
 /**************** HEADER RULES ****************/
@@ -58,7 +65,7 @@ body {
 
 .header__nav-item a {
     color: #eee;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
@@ -74,7 +81,7 @@ body {
 .welcome {
     display: grid;
     grid-template-rows: 5fr 1fr;
-    height: 60vh;
+    height: 55vh;
     background-image: linear-gradient(#111 10%, transparent, #111 80%), url("/imgs/welcome-background.jpg");
     background-position: center center;
     background-size: cover;
@@ -87,14 +94,7 @@ body {
     align-items: center;
 }
 
-.welcome__text-container h2 {
-    padding: 1.5rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.3rem;
-}
-
-.welcome__text-container ul {
+.welcome__text-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,7 +103,7 @@ body {
     list-style: none;
 }
 
-.welcome__text-container li {
+.welcome__text-items {
     padding: 0.5rem 0;
     color: #48e;
     font-size: 1.5rem;
@@ -112,7 +112,7 @@ body {
     letter-spacing: 0.5rem;
 }
 
-.welcome__text-container h4 {
+.welcome__text-explain {
     padding: 1.5rem 0;
     font-size: 1rem;
     font-weight: 500;
@@ -120,8 +120,7 @@ body {
 }
 
 .welcome__text {
-    width: 60%;
-    font-size: 1rem;
+    width: 70%;
     text-align: center;
 }
 
@@ -139,3 +138,78 @@ body {
 .welcome__nav-list svg .links {
     fill: #eee;
 }
+
+/**************** SKILLS RULES ****************/
+.skills {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.skills__title {
+    align-self: center;
+    margin-bottom: 3rem;
+    width: 60%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.skills__container {
+    padding: 2rem 3rem;
+    width: 80%;
+}
+
+.skills__titles {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    width: 90%;
+    list-style: none;
+}
+
+.skills__item {
+    padding: 0.8rem 1.2rem;
+    background-color: #252525;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #000;
+}
+
+.skills__hard-container {
+    border-radius: 0 2rem 0 0;
+    border-top: 1px solid #48e;
+    border-right: 1px solid #48e;
+    box-shadow: 2px -2px 0.5rem #48e;
+}
+
+.skills__soft-container {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-top: 1px solid #48e;
+    border-left: 1px solid #48e;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: -2px -2px 0.5rem #48e;
+}
+
+.skills__soft-container h3 {
+    text-align: right;
+}
+
+.skills__soft-container ul {
+    flex-direction: row-reverse;
+}
+
+/**************** RESPONSIVE RULES ****************/
