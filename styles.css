@@ -40,13 +40,13 @@ body {
 
 /**************** HEADER RULES ****************/
 .header {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3rem;
     width: 100%;
-    background-color: transparent;
+    background-color: #111;
 }
 
 .header__logo-container {
@@ -89,6 +89,10 @@ body {
 
 .link-selected a {
     color: #48e;
+}
+
+.header__nav-item a:hover {
+    filter: drop-shadow(0 0 1rem #48e);
 }
 
 /**************** WELCOME RULES ****************/
@@ -154,19 +158,31 @@ body {
     fill: #eee;
 }
 
+.welcome__nav-list svg:hover {
+    filter: drop-shadow(0 0 1rem #48e);
+}
+
 /**************** SKILLS RULES ****************/
+.skills {
+    padding: 2rem 2rem;
+}
+
 .skills__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 3rem;
     width: 80%;
-    background-color: #151515;
+    background-color: #181818;
 }
 
 .skills__titles {
     margin-bottom: 2rem;
     padding: 0 1rem;
-    width: 50%;
+    width: 70%;
     font-size: 1.2rem;
     font-weight: 500;
+    text-align: center;
     letter-spacing: 0.1rem;
 }
 
@@ -187,25 +203,19 @@ body {
 }
 
 .skills__hard-container {
-    border-radius: 0 2rem 0 0;
+    border-radius: 2rem 2rem 0 2rem;
     border-top: 1px solid #48e;
     border-right: 1px solid #48e;
-    box-shadow: 2px -2px 0.5rem #48e;
+    box-shadow: 0px 0px 1rem #48e;
 }
 
 .skills__soft-container {
     align-self: flex-end;
-    display: flex;
-    flex-direction: column;
     align-items: flex-end;
     border-top: 1px solid #48e;
     border-left: 1px solid #48e;
-    border-radius: 2rem 0 0 2rem;
-    box-shadow: -2px -2px 0.5rem #48e;
-}
-
-.skills__soft-container h3 {
-    text-align: right;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 1rem #48e;
 }
 
 .skills__soft-container ul {
@@ -245,7 +255,7 @@ body {
     gap: 2rem;
     padding: 2rem;
     height: 20vh;
-    background-color: #151515;
+    background-color: #181818;
     border-radius: 2rem;
     border: 1px solid #48e;
     box-shadow: 0 0 1rem #48e;
