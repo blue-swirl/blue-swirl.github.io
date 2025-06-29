@@ -24,18 +24,24 @@ body {
     letter-spacing: 0.3rem;
 }
 
+.main {
+    display: grid;
+    grid-template-rows: repeat(1fr, 4);
+    gap: 3rem;
+}
+
 .section {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
 }
 
 .section__title {
     align-self: center;
-    margin-bottom: 3rem;
-    width: 60%;
+    margin-bottom: 2rem;
+    width: 70%;
     font-size: 1.3rem;
     text-align: center;
+    text-shadow: 0 0 2rem #48e;
 }
 
 /**************** HEADER RULES ****************/
@@ -211,7 +217,6 @@ body {
 
 .skills__soft-container {
     align-self: flex-end;
-    align-items: flex-end;
     border-top: 1px solid #48e;
     border-left: 1px solid #48e;
     border-radius: 2rem;
@@ -230,17 +235,18 @@ body {
 .projects__section {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
     width: 80%;
 }
 
 .projects__section-header {
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
     padding: 1rem 0;
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #555;
 }
 
 .projects__article-container {
@@ -271,6 +277,125 @@ body {
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
     line-height: 1.2rem;
+}
+
+/**************** FOOTER RULES ****************/
+.footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: "H H""S S""P A""L L""E E";
+    row-gap: 4rem;
+}
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer__header {
+    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border-bottom: 1px solid #666;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__links {
+    color: #eee;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.footer__links:hover {
+    text-shadow: 0 0 1rem #fff;
+}
+
+.footer__header-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: H;
+}
+
+.footer__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    grid-area: L;
+}
+
+.footer__logo {
+    width: 2rem;
+    filter: drop-shadow(0 0 2rem #48e);
+}
+
+.footer__logo .logo__path {
+    fill: #48e;
+}
+
+.footer__logo-header {
+    color: #48e;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 0 0 2rem #48e;
+    letter-spacing: 0.5rem;
+}
+
+.footer__policy-container {
+    grid-area: P;
+}
+
+.footer__sites-container {
+    grid-area: S;
+}
+
+.footer__links-container {
+    grid-area: A;
+}
+
+.footer__icons {
+    width: 1.5rem;
+}
+
+.footer__end-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    grid-area: E;
+}
+
+.footer__end-rights {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ddd;
+    letter-spacing: 0.2rem;
+}
+
+.footer__end-copy {
+    font-size: 0.8rem;
+    color: #ccc;
+    letter-spacing: 0.2rem;
 }
 
 /**************** RESPONSIVE RULES ****************/
