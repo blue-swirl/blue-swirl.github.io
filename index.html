@@ -16,6 +16,9 @@
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item link-selected"><a href="#">Home</a></li>
+                <li class="header__nav-item"><a href="#skills">Skills</a></li>
+                <li class="header__nav-item"><a href="#projects">Projects</a></li>
+                <li class="header__nav-item"><a href="#footer">Contact</a></li>
                 <li class="header__nav-item"><a href="#">About</a></li>
             </ul>
         </nav>
@@ -40,28 +43,41 @@
                 </ul>
             </nav>
         </section>
-        <section class="skills section">
+        <section class="skills section" id="skills">
             <h2 class="main__title section__title">To throght you across the special experience we have many skills</h2>
             <div class="skills__hard-container skills__container">
                 <h3 class="skills__titles">Hard Skills</h3>
                 <ul class="skills__list">
                     <li class="skills__item"  style="background-color: #f44">
+                        <img class="skills__icons" src="/imgs/python.svg">
                         <p>Python</p>
                     </li>
                     <li class="skills__item" style="background-color: #2a2">
-                        <p>Django</p>
+                        <p>django</p>
                     </li>
                     <li class="skills__item" style="background-color: #f44">
+                        <img class="skills__icons" src="/imgs/html.svg">
                         <p>HTML</p>
                     </li>
                     <li class="skills__item"  style="background-color: #22a">
+                        <img class="skills__icons" src="/imgs/html.svg">
                         <p>CSS</p>
                     </li>
+                    <li class="skills__item" style="background-color: #aa4">
+                        <img class="skills__icons" src="/imgs/js.svg">
+                        <p>JavaScript</p>
+                    </li>
                     <li class="skills__item" style="background-color: #33b">
+                        <img class="skills__icons" src="/imgs/react.svg">
                         <p>React</p>
                     </li>
                     <li class="skills__item" style="background-color: #f44">
+                        <img class="skills__icons" src="/imgs/java.svg">
                         <p>Java</p>
+                    </li>
+                    <li class="skills__item" style="background-color: #33b">
+                        <img class="skills__icons" src="/imgs/sql.svg">
+                        <p>SQL</p>
                     </li>
                 </ul>
             </div>
@@ -69,24 +85,33 @@
                 <h3 class="skills__titles">Soft Skills</h3>
                 <ul class="skills__list">
                     <li class="skills__item" style="background-color: #f44">
-                        <p>Git</p>
+                        <img class="skills__icons" src="/imgs/git.svg">
+                        <p>git</p>
                     </li>
-                    <li class="skills__item" style="background-color: #222">
+                    <li class="skills__item" style="background-color: #333">
+                        <img class="skills__icons" src="/imgs/github.svg">
                         <p>Github</p>
                     </li>
                     <li class="skills__item" style="background-color: #22a">
+                        <img class="skills__icons" src="/imgs/python.svg">
                         <p>Wordpress</p>
                     </li>
                     <li class="skills__item" style="background-color: #a2a">
+                        <img class="skills__icons" src="/imgs/figma.svg">
                         <p>Figma</p>
                     </li>
                     <li class="skills__item" style="background-color: #2a2">
+                        <img class="skills__icons" src="/imgs/qt.svg">
                         <p>QtDesigner</p>
+                    </li>
+                    <li class="skills__item" style="background-color: #33b">
+                        <img class="skills__icons" src="/imgs/psql.svg">
+                        <p>PostgreSQL</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="projects section">
+        <section class="projects section" id="projects">
             <h2 class="main__title section__title">Look at our finished projects</h2>
             <section class="projects__section project__web">
                 <h3 class="projects__section-header">Web Projects</h3>
@@ -103,7 +128,7 @@
             </section>
             <section class="projects__section project__desktop">
                 <h3 class="projects__section-header">Desktop Projects</h3>
-                <div class="projects__article-container">
+                <div class="projects__article-container" style="grid-template-columns: 1fr;">
                     <article class="projects__article projects__article-pyhton">
                         <h4 class="projects__article-header">Pyhton</h4>
                         <p class="projects__article-description">Desktop Apps devlopment with Pyhton and QtDesigner</p>
@@ -112,7 +137,7 @@
             </section>
         </section>
     </main>
-    <footer class="footer section">
+    <footer class="footer" id="footer">
         <div class="footer__header-container">
             <h2 class="section__title main__title">Don't waste your time, contact us now!<br>We'll pleasent to help you</h2>
         </div>
@@ -148,9 +173,9 @@
             <h3 class="footer__header">Contact</h3>
             <ul class="footer__list">
                 <li class="footer__items"><img class="footer__icons" src="/imgs/whatsapp.svg"><a href="" class="footer__links">5351505492</a></li>
-                <li class="footer__items"><img class="footer__icons" src="/imgs/telegram.svg" alt=""><a href="" class="footer__links">5351505492</a></li>
-                <li class="footer__items"><img class="footer__icons" src="/imgs/git.svg" alt=""><a href="" class="footer__links"></a></li>
-                <li class="footer__items"><img class="footer__icons" src="/imgs/gmail.svg" alt=""><a href="" class="footer__links"></a></li>
+                <li class="footer__items"><img class="footer__icons" src="/imgs/telegram.svg"><a href="" class="footer__links">5351505492</a></li>
+                <li class="footer__items"><img class="footer__icons" src="/imgs/github.svg"><a href="" class="footer__links"></a></li>
+                <li class="footer__items"><img class="footer__icons" src="/imgs/gmail.svg"><a href="" class="footer__links"></a></li>
             </ul>
         </div>
         <div class="footer__end-container">
