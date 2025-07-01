@@ -47,7 +47,7 @@ body {
     font-size: 1.8rem;
     text-align: center;
     text-wrap: pretty;
-    text-shadow: 0 0 2rem #48e;
+    text-shadow: 0 0 2rem #666;
 }
 
 /**************** HEADER RULES ****************/
@@ -55,14 +55,15 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 3rem;
     width: 100%;
     background-color: #111;
+    z-index: 2;
 }
 
 .header__logo-container {
     display: flex;
+    align-items: center;
 }
 
 .header__logo {
@@ -77,6 +78,8 @@ body {
 }
 
 .header__nav{
+    display: flex;
+    align-items: stretch;
     min-width: 20rem;
     width: 40%;
 }
@@ -84,37 +87,54 @@ body {
 .header__nav-list {
     display: flex;
     justify-content: space-evenly;
+    align-items: stretch;
+    width: 100%;
 }
 
 .header__nav-item {
     list-style: none;
 }
 
+.header__nav-item img {
+    height: 0.9rem;
+    width: 0.9rem;
+}
+
 .header__nav-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
     color: #eee;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 0 0 0.5rem #48e;
     letter-spacing: 0.2rem;
     transition: filter 0.2s;
 }
 
-.link-selected a {
-    color: #48e;
+.header__nav-item a > p {
+    display: none;
 }
 
 .header__nav-item a:hover {
     filter: drop-shadow(0 0 1rem #fff);
 }
 
+.link-selected a {
+    padding: 0 0.8rem;
+    color: #81d4f7;
+    border-bottom: 1px solid #81d4f7;
+}
+
 /**************** WELCOME RULES ****************/
 .welcome {
     display: grid;
     grid-template-rows: 5fr 1fr;
+    padding-top: 4rem;
     height: 60vh;
-    background-image: linear-gradient(#111 10%, transparent, #111 80%), url("/imgs/welcome-background.jpg");
+    background-image: linear-gradient(#111 5%, transparent, #111 90%), url("/imgs/welcome-background.jpg");
     background-position: center center;
     background-size: cover;
 }
@@ -137,7 +157,7 @@ body {
 
 .welcome__text-items {
     padding: 0.5rem 0;
-    color: #48e;
+    color: #81d4f7;
     font-size: 1.5rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -198,17 +218,17 @@ body {
     align-items: center;
     padding: 2rem 1rem;
     width: 100%;
-    background-color: #181818;
 }
 
 .skills__titles {
     margin-bottom: 2rem;
-    padding: 0 1rem;
+    padding: 0.8rem 1rem;
     width: 70%;
-    font-size: 1.2rem;
-    font-weight: 500;
+    color: #81d4f7;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
     text-align: center;
-    letter-spacing: 0.1rem;
+    border-bottom: 1px solid #81d4f7;
 }
 
 .skills__list {
@@ -225,29 +245,19 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 0.1rem;
+    border: 1px solid #000;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem #000;
+    box-shadow: 0 0 1rem #000;
 }
 
 .skills__icons {
     height: 1rem;
 }
 
-.skills__hard-container {
-    border-radius: 2rem;
-    border-top: 1px solid #48e;
-    border-right: 1px solid #48e;
-    box-shadow: 0px 0px 1rem #48e;
-}
-
 .skills__soft-container {
     align-self: flex-end;
-    border-top: 1px solid #48e;
-    border-left: 1px solid #48e;
-    border-radius: 2rem;
-    box-shadow: 0px 0px 1rem #48e;
 }
 
 /**************** PROJECTS RULES ****************/
@@ -269,7 +279,7 @@ body {
     font-weight: 500;
     letter-spacing: 0.1rem;
     text-align: center;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #eee;
 }
 
 .projects__article-container {
@@ -279,33 +289,113 @@ body {
 }
 
 .projects__article {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    height: 20vh;
-    background-color: #181818;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    padding: 1.5rem;
+    height: 18vh;
+    background: linear-gradient(to right, #181818 50%, #222);
     border-radius: 2rem;
-    border: 1px solid #48e;
-    box-shadow: 0 0 1rem #48e;
+    border: 1px solid #81d4f7aa;
+    border-right: 1px solid #81d4f7;
+    border-top: 1px solid #81d4f7;
+    box-shadow: 0 0 1rem #81d4f7;
     transition: box-shadow 0.5s;
 }
 
 .projects__article:hover {
-    box-shadow: 0 0 2rem #48e;
+    box-shadow: 0 0 2rem #81d4f7;
+}
+
+.projects__article-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.8rem;
 }
 
 .projects__article-header {
     font-size: 1.3rem;
     letter-spacing: 0.3rem;
+    color: #81d4f7;
 }
 
 .projects__article-description {
-    width: 90%;
     font-size: 1rem;
     text-wrap: pretty;
     letter-spacing: 0.1rem;
     line-height: 1.2rem;
+}
+
+.projects__article-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects__article-img > img {
+    width: 80%;
+    filter: drop-shadow(0 0 1rem #000);
+}
+
+/**************** CERTIFICATES RULES ****************/
+.certificates__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+}
+
+.certificates__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    width: 10rem;
+    height: 12rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #000;
+}
+
+.certificates__header {
+    font-size: 0.8rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    line-height: 1.2rem;
+}
+
+.certificates__item-1st {
+    background-image: linear-gradient(transparent, #000000ee), url("/certificates/HTML\ -\ Mimo.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.certificates__item-2nd {
+    background-image: linear-gradient(transparent, #000000ee), url("/certificates/CSS\ -\ Mimo.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.certificates__item-3rd {
+    background-image: linear-gradient(transparent, #000000ee), url("/certificates/JavaScript\ Intermedio\ -\ Sololearn.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.certificates__item-4th {
+    background-image: linear-gradient(transparent, #000000ee), url("/certificates/Desarrollador\ Python\ -\ Sololearn.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.certificates__item-5th {
+    background-image: linear-gradient(transparent, #000000ee), url("/certificates/SQL\ Intermedio\ -\ Sololearn.jpg");
+    background-position: center center;
+    background-size: cover;
 }
 
 /**************** FOOTER RULES ****************/
@@ -329,10 +419,11 @@ body {
 
 .footer__header {
     padding: 0.5rem 3rem;
+    color: #81d4f7;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #81d4f7;
 }
 
 .footer__list {
@@ -380,18 +471,18 @@ body {
 
 .footer__logo {
     width: 2rem;
-    filter: drop-shadow(0 0 2rem #48e);
+    filter: drop-shadow(0 0 2rem #81d4f7);
 }
 
 .footer__logo .logo__path {
-    fill: #48e;
+    fill: #81d4f7;
 }
 
 .footer__logo-header {
-    color: #48e;
+    color: #81d4f7;
     font-size: 1.8rem;
     font-weight: 600;
-    text-shadow: 0 0 2rem #48e;
+    text-shadow: 0 0 2rem #81d4f7;
     letter-spacing: 0.5rem;
 }
 
@@ -443,6 +534,10 @@ body {
         width: 80%;
     }
 
+    .projects__article {
+        height: 20vh;
+    }
+
     .projects__article-description {
         width: 70%;
     }
@@ -457,34 +552,50 @@ body {
         width: 60%;
     }
 
+    .header__nav-item a > p {
+        display: block;
+    }
+
+    .header__nav-item a > img {
+        display: none;
+    }
+
     .section {
         width: 80%;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1025px) {
     html {
         font-size: 16px;
+    }
+
+    .welcome {
+        height: 80vh;
     }
 
     .section {
         width: 70%;
     }
+
+    .projects__article {
+        gap: 1.5rem;
+        height: 25vh;
+    }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
     html {
         font-size: 18px;
     }
 
     .main {
-        gap: 6rem;
+        gap: 3rem;
     }
 
     .welcome {
         grid-template-columns: 5fr 1fr;
         grid-template-rows: 1fr;
-        height: 70vh;
         padding-left: 10rem;
     }
 
@@ -510,11 +621,25 @@ body {
 
     .skills__container {
         padding: 2rem 2rem;
-        width: 50%;
+        width: 60%;
+    }
+
+    .projects__article {
+        gap: 1.2rem;
+        padding: 1.5rem;
     }
 
     .projects__article-container {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .projects__article-description {
+        width: 80%;
+    }
+
+    .projects__native {
+        align-self: center;
+        width: 50%;
     }
 
     .footer {

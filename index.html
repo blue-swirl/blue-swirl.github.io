@@ -5,34 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueSwirl</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="shortcut icon" href="/imgs/swirl-logo.svg" type="image/svg">
+    <link rel="shortcut icon" href="/imgs/swirl-two.svg" type="image/svg">
 </head>
 <body>
+    <!----------------------------------------- HEADER SECTION ------------------------------------------------------------->
     <header class="header">
         <div class="header__logo-container">
-            <img class="header__logo" src="/imgs/swirl-logo.svg">
+            <img class="header__logo" src="/imgs//swirl-two.svg">
             <h1 class="header__title">BlueSwirl</h1>
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item link-selected"><a href="#">Home</a></li>
-                <li class="header__nav-item"><a href="#skills">Skills</a></li>
-                <li class="header__nav-item"><a href="#projects">Projects</a></li>
-                <li class="header__nav-item"><a href="#footer">Contact</a></li>
-                <li class="header__nav-item"><a href="#">About</a></li>
+                <li class="header__nav-item link-selected">
+                    <a href="#">
+                        <img src="/imgs/home.svg">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#skills">
+                        <img src="/imgs/lightbulb.svg">
+                        <p>Skills</p>
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#projects">
+                        <img src="/imgs/folder.svg">
+                        <p>Projects</p>
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#">
+                        <img src="/imgs/user.svg">
+                        <p>About</p>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+    <!----------------------------------------- MAIN SECTION ------------------------------------------------------------->
     <main class="main">
+        <!----------------------------------------- WELCOME SECTION ------------------------------------------------------------->
         <section class="welcome">
             <div class="welcome__text-container">
-                <h2 class="welcome__text main__title">Welcome to BlueSwirl<br><span class="welcome__text-explain">we get</span></h2>
+                <h2 class="welcome__text main__title">Welcome to BlueSwirl</h2>
                 <ul class="welcome__text-list">
                     <li class="welcome__text welcome__text-items">Security</li>
                     <li class="welcome__text welcome__text-items">Fastly</li>
                     <li class="welcome__text welcome__text-items">Confortable</li>
                 </ul>
-                <h4 class="welcome__text welcome__text-explain">to you, you only task is sit there and pleasent for a good job.</h4>
+                <h4 class="welcome__text welcome__text-explain">All of this to you, you only task is sit there and pleasent for a good job.</h4>
             </div>
             <nav class="welcome__nav">
                 <ul class="welcome__nav-list">
@@ -43,6 +65,7 @@
                 </ul>
             </nav>
         </section>
+        <!----------------------------------------- SKILLS SECTION ------------------------------------------------------------->
         <section class="skills section" id="skills">
             <h2 class="main__title section__title">To throght you across the special experience we have many skills</h2>
             <div class="skills__hard-container skills__container">
@@ -60,7 +83,7 @@
                         <p>HTML</p>
                     </li>
                     <li class="skills__item"  style="background-color: #22a">
-                        <img class="skills__icons" src="/imgs/html.svg">
+                        <img class="skills__icons" src="/imgs/css.svg">
                         <p>CSS</p>
                     </li>
                     <li class="skills__item" style="background-color: #aa4">
@@ -111,32 +134,71 @@
                 </ul>
             </div>
         </section>
+        <!----------------------------------------- PROJECTS SECTION ------------------------------------------------------------->
         <section class="projects section" id="projects">
             <h2 class="main__title section__title">Look at our finished projects</h2>
             <section class="projects__section project__web">
                 <h3 class="projects__section-header">Web Projects</h3>
                 <div class="projects__article-container">
                     <article class="projects__article projects__article-back">
-                        <h4 class="projects__article-header">Backend</h4>
-                        <p class="projects__article-description">Backend projects devlopment with Django Rest Framework, JWT Authentication and more</p>
+                        <div class="projects__article-text">
+                            <h4 class="projects__article-header">Backend</h4>
+                            <p class="projects__article-description">Backend projects devlopment with Django Rest Framework, JWT Authentication and more</p>
+                        </div>
+                        <div class="projects__article-img">
+                            <img src="/imgs/backend.svg">
+                        </div>
                     </article>
                     <article class="projects__article projects__article-front">
-                        <h4 class="projects__article-header">Frontend</h4>
-                        <p class="projects__article-description">Frontend projects devlopment with React, Figma, and Wordpress</p>
+                        <div class="projects__article-text">
+                            <h4 class="projects__article-header">Frontend</h4>
+                            <p class="projects__article-description">Frontend projects devlopment with React, Figma, and Wordpress</p>
+                        </div>
+                        <div class="projects__article-img">
+                            <img src="/imgs/frontend.svg">
+                        </div>
                     </article>
                 </div>
             </section>
-            <section class="projects__section project__desktop">
-                <h3 class="projects__section-header">Desktop Projects</h3>
+            <section class="projects__section projects__native">
+                <h3 class="projects__section-header">Native Projects</h3>
                 <div class="projects__article-container" style="grid-template-columns: 1fr;">
-                    <article class="projects__article projects__article-pyhton">
-                        <h4 class="projects__article-header">Pyhton</h4>
-                        <p class="projects__article-description">Desktop Apps devlopment with Pyhton and QtDesigner</p>
+                    <article class="projects__article projects__article-python">
+                        <div class="projects__article-text">
+                            <h4 class="projects__article-header">Desktop</h4>
+                            <p class="projects__article-description">Desktop Apps devlopment with Pyhton and QtDesigner</p>
+                        </div>
+                        <div class="projects__article-img">
+                            <img src="/imgs/desktop.svg">
+                        </div>
                     </article>
                 </div>
             </section>
         </section>
+        <!----------------------------------------- CERTIFICATES SECTION ------------------------------------------------------------->
+        <section class="certificates section" id="certificates">
+            <h2 class="main__title section__title">Look out</h2>
+            <ul class="certificates__list">
+                <li class="certificates__item-1st certificates__item">
+                    <h3 class="certificates__header-1st certificates__header">HTML Intermediate</h3>
+                </li>
+                <li class="certificates__item-2nd certificates__item">
+                    <h3 class="certificates__header-2nd certificates__header">CSS Intermediate</h3>
+                </li>
+                <li class="certificates__item-3rd certificates__item">
+                    <h3 class="certificates__header-3rd certificates__header">JavaScript Intermediate</h3>
+                </li>
+                <li class="certificates__item-4th certificates__item">
+                    <h3 class="certificates__header-4th certificates__header">Python Developer</h3>
+                </li>
+                <li class="certificates__item-5th certificates__item">
+                    <h3 class="certificates__header-5th certificates__header">SQL Intermediate</h3>
+                </li>
+            </ul>
+                
+        </section>
     </main>
+    <!----------------------------------------- FOOTER SECTION ------------------------------------------------------------->
     <footer class="footer" id="footer">
         <div class="footer__header-container">
             <h2 class="section__title main__title">Don't waste your time, contact us now!<br>We'll pleasent to help you</h2>
