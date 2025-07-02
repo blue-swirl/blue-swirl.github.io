@@ -19,10 +19,12 @@ html {
     color: #eee;
     font-family: WorkSans;
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #111;
+    scroll-behavior: smooth;
 }
 
 .main__logo {
@@ -76,7 +78,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-left: 1rem;
-    height: 3rem;
+    height: 4rem;
     width: 100%;
     background-color: #111;
     z-index: 2;
@@ -93,6 +95,7 @@ body {
 }
 
 .header__logo-container h1 {
+    display: none;
     color: #81d4f7;
     font-size: 1.3rem;
     font-family: Montserrat;
@@ -104,7 +107,7 @@ body {
     display: flex;
     align-items: stretch;
     min-width: 20rem;
-    width: 40%;
+    width: 70%;
 }
 
 .header__nav-list {
@@ -119,8 +122,8 @@ body {
 }
 
 .header__nav-item img {
-    height: 0.9rem;
-    width: 0.9rem;
+    height: 1.2rem;
+    width: 1.2rem;
 }
 
 .header__nav-item a {
@@ -129,7 +132,7 @@ body {
     gap: 0.5rem;
     height: 100%;
     color: #eee;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
@@ -407,7 +410,8 @@ body {
 }
 
 .certificates__header {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-align: center;
     letter-spacing: 0.1rem;
     line-height: 1.2rem;
@@ -443,12 +447,33 @@ body {
     background-size: cover;
 }
 
+/**************** CONTACT RULES ****************/
+.contact__cta {
+    align-self: center;
+    padding: 1rem 0;
+    width: 12rem;
+    color: #eee;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 1px solid #81d4f7;
+    box-shadow: 0 0 1rem #81d4f7;
+}
+
+.contact__cta:hover {
+    background-color: #eee;
+    color: #111;
+}
+
 /**************** FOOTER RULES ****************/
 .footer {
-    margin-top: 2rem;
+    margin-top: 10rem;
     padding: 2rem;
     display: grid;
-    grid-template-areas: "H H""S P""A A""L L""E E";
+    grid-template-areas: "S P""A A""L L""E E";
     grid-template-columns: 1fr 1fr;
     row-gap: 4rem;
     background-image: linear-gradient(#111 10%, transparent, #111 90%), url("/imgs/welcome-background.jpg");
@@ -501,30 +526,8 @@ body {
     text-shadow: 0 0 1rem #fff;
 }
 
-.footer__header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: H;
-}
-
-.footer__cta {
-    padding: 1rem 0;
-    width: 12rem;
-    color: #eee;
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    background-color: transparent;
-    border-radius: 1rem;
-    border: 1px solid #81d4f7;
-    box-shadow: 0 0 1rem #81d4f7;
-}
-
-.footer__cta:hover {
-    background-color: #eee;
-    color: #111;
+.footer__items-links {
+    text-transform: lowercase !important; 
 }
 
 .footer__logo-container {
@@ -574,14 +577,14 @@ body {
 }
 
 .footer__end-rights {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: #ddd;
     letter-spacing: 0.2rem;
 }
 
 .footer__end-copy {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #ccc;
     letter-spacing: 0.2rem;
 }
@@ -606,7 +609,7 @@ body {
     }
 
     .footer {
-        grid-template-areas: "H H H""S P A""L L L""E E E";
+        grid-template-areas: "S P A""L L L""E E E";
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -616,8 +619,8 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .header__nav {
-        width: 60%;
+    .header__logo-container h1 {
+        display: block;
     }
 
     .header__nav-item a > p {
@@ -658,6 +661,14 @@ body {
     .welcome__nav-list {
         flex-direction: column;
         height: 60%;
+    }
+
+    .header {
+        height: 3rem;
+    }
+
+    .header__nav {
+        width: 60%;
     }
 
     .section {
