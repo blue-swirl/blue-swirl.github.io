@@ -1,11 +1,13 @@
 /**************** FONTS ****************/
 @font-face {
     font-family: WorkSans;
+    font-display: swap;
     src: url("/fonts/WorkSans-VariableFont_wght.ttf");
 }
 
 @font-face {
     font-family: Montserrat;
+    font-display: swap;
     src: url("/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
@@ -18,7 +20,7 @@
 html {
     color: #eee;
     font-family: WorkSans;
-    font-size: 10px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -30,15 +32,15 @@ body {
 .main__logo {
     color: #81d4f7;
     font-family: Montserrat;
-    font-size: 3.8rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 500;
     letter-spacing: 0.5rem;
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
 }
 
 .section {
@@ -51,11 +53,11 @@ body {
 .section__title {
     align-self: center;
     margin-bottom: 2rem;
-    padding: 1.5rem 0;
+    padding: 1.3rem 0;
     width: 70%;
     color: #81d4f7;
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.5rem;
     text-align: center;
     text-wrap: pretty;
@@ -94,15 +96,6 @@ body {
     width: 1.5rem;
 }
 
-.header__logo-container h1 {
-    display: none;
-    color: #81d4f7;
-    font-size: 1.3rem;
-    font-family: Montserrat;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
-}
-
 .header__nav{
     display: flex;
     align-items: stretch;
@@ -133,7 +126,7 @@ body {
     height: 100%;
     color: #eee;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -159,8 +152,9 @@ body {
     display: grid;
     grid-template-rows: 5fr 1fr;
     padding-top: 4rem;
-    height: 60vh;
-    background-image: linear-gradient(#111 5%, transparent, #111 90%), url("/imgs/welcome-background.jpg");
+    height: 80vh;
+    min-height: 40rem;
+    background-image: linear-gradient(#111 5%, transparent, #111 90%), url("/imgs/welcome-background.webp");
     background-position: center center;
     background-size: cover;
 }
@@ -184,7 +178,7 @@ body {
 .welcome__text-items {
     padding: 0.5rem 0;
     color: #81d4f7;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: Montserrat;
     font-weight: 600;
     text-transform: uppercase;
@@ -193,7 +187,7 @@ body {
 
 .welcome__text-explain {
     padding: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: Montserrat;
     font-weight: 500;
     text-wrap: pretty;
@@ -213,7 +207,7 @@ body {
 }
 
 .welcome__logo {
-    width: 5rem;
+    width: 4rem;
 }
 
 .welcome__nav {
@@ -269,8 +263,8 @@ body {
 }
 
 .skills__deep-title {
-    color: #0e577e;
-    border-bottom: 1px solid #0e577e;
+    color: #81d4f7;
+    border-bottom: 1px solid #81d4f7;
 }
 
 .skills__surf-title {
@@ -292,6 +286,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
+    color: #fff;
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
     border: 1px solid #000;
@@ -322,8 +317,8 @@ body {
 .projects__section-header {
     margin-bottom: 1.5rem;
     padding: 1rem 0;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 600;
     letter-spacing: 0.1rem;
     text-align: center;
     border-bottom: 1px solid #eee;
@@ -337,7 +332,7 @@ body {
 
 .projects__article {
     display: grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 2fr 1fr;
     padding: 1.5rem;
     height: 15rem;
     background: linear-gradient(to right, #181818 50%, #222);
@@ -359,10 +354,12 @@ body {
     justify-content: center;
     gap: 2rem;
     padding: 0.8rem;
+    padding-right: 0;
 }
 
 .projects__article-header {
     font-size: 1.3rem;
+    font-weight: 500;
     letter-spacing: 0.3rem;
     color: #81d4f7;
 }
@@ -383,6 +380,7 @@ body {
 
 .projects__article-img > img {
     width: 80%;
+    max-width: 10rem;
     filter: drop-shadow(0 0 1rem #000);
 }
 
@@ -411,7 +409,7 @@ body {
 
 .certificates__header {
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
     letter-spacing: 0.1rem;
     line-height: 1.2rem;
@@ -476,7 +474,7 @@ body {
     grid-template-areas: "S P""A A""L L""E E";
     grid-template-columns: 1fr 1fr;
     row-gap: 4rem;
-    background-image: linear-gradient(#111 10%, transparent, #111 90%), url("/imgs/welcome-background.jpg");
+    background-image: linear-gradient(#111 10%, transparent, #111 90%), url("/imgs/welcome-background.webp");
     background-position: center center;
     background-size: cover;
 }
@@ -491,7 +489,7 @@ body {
 .footer__header {
     padding: 0.5rem 3rem;
     color: #81d4f7;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     border-bottom: 1px solid #81d4f7;
@@ -513,8 +511,11 @@ body {
 }
 
 .footer__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     color: #eee;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -539,15 +540,15 @@ body {
 }
 
 .footer__logo {
-    width: 2rem;
+    width: 1.9rem;
     filter: drop-shadow(0 0 2rem #81d4f7);
 }
 
 .footer__logo-header {
     color: #81d4f7;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Montserrat;
-    font-weight: 400;
+    font-weight: 500;
     text-shadow: 0 0 2rem #81d4f7;
     letter-spacing: 0.5rem;
 }
@@ -565,7 +566,7 @@ body {
 }
 
 .footer__icons {
-    width: 1.2rem;
+    width: 1.1rem;
 }
 
 .footer__end-container {
@@ -577,24 +578,20 @@ body {
 }
 
 .footer__end-rights {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     color: #ddd;
     letter-spacing: 0.2rem;
 }
 
 .footer__end-copy {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #ccc;
     letter-spacing: 0.2rem;
 }
 
 /**************** RESPONSIVE RULES ****************/
 @media screen and (min-width: 600px) {
-    html {
-        font-size: 14px;
-    }
-
     .skills__container {
         padding: 2rem 2rem;
         width: 80%;
@@ -619,10 +616,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .header__logo-container h1 {
-        display: block;
-    }
-
     .header__nav-item a > p {
         display: block;
     }
@@ -681,10 +674,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) and (min-height: 1025px) {
-    html {
-        font-size: 16px;
-    }
-
     .welcome {
         grid-template-columns: 1fr;
         grid-template-rows: 5fr 1fr;
@@ -714,14 +703,6 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 16px;
-    }
-
-    .main {
-        gap: 3rem;
-    }
-
     .welcome {
         grid-template-columns: 5fr 1fr;
         grid-template-rows: 1fr;
@@ -783,9 +764,5 @@ body {
 @media screen and (min-width: 1900px) {
     html {
         font-size: 22px;
-    }
-
-    .main {
-        gap: 5rem;
     }
 }
